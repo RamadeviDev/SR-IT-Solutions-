@@ -509,6 +509,6 @@ footer p {
      .wave {
         height: 157px; /* Reduced height for mobile */
         background-size: 150% auto; /* Adjust background size for mobile */
-        bottom: 48px;
+        bottom: 30pxpx;
     }
 }
