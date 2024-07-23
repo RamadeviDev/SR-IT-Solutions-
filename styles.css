@@ -505,4 +505,10 @@ footer p {
         position: relative;
         right: -4px;
     }
+
+     .wave {
+        height: 157px; /* Reduced height for mobile */
+        background-size: 150% auto; /* Adjust background size for mobile */
+        bottom: -52px;
+    }
 }
