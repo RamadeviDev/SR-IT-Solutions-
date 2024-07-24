@@ -332,9 +332,10 @@ footer p {
         font-size: 1.2rem;
     }
 
-    .mobile-nav.active {
-        position: relative;
-        bottom: 12px;
+     .mobile-nav.active {
+        display: flex;
+        position: relative;     
+        top: -4px;
     }
 
     footer .footer-content {
