@@ -408,6 +408,7 @@ footer .footer-content {
 footer .footer-contact {
     max-width: 300px;
     position: relative;
+     right: -462px;
 }
 
 .Email {
