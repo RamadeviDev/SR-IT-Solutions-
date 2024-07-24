@@ -491,8 +491,9 @@ footer p {
     }
 
     .mobile-nav.active {
-        position: relative;
-        bottom: 12px;
+        display: flex;
+        position: relative;     
+        top: -4px;
     }
 
     footer .footer-content {
