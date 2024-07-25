@@ -146,14 +146,11 @@ header .container {
     background: linear-gradient(to right, #38bdf8, #0ea5e9);
     color: #fff;
     text-align: center;
-}
-
-#hero .container {
+    height: 60vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    padding: 2rem 0;
 }
 
 #hero h1 {
@@ -163,7 +160,6 @@ header .container {
 
 #hero p {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
 }
 
 /* About Section */
@@ -177,6 +173,7 @@ header .container {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .text-section, .image-section {
@@ -193,6 +190,8 @@ header .container {
 .text-section p {
     font-size: 1.125rem;
     color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
 
 .image-section img {
@@ -204,6 +203,7 @@ header .container {
 /* Mission and Vision Section */
 #mission-vision {
     background-color: #e2e8f0;
+    padding: 3rem 0;
 }
 
 .mission-vision-content {
@@ -222,8 +222,12 @@ header .container {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
     flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-10px);
 }
 
 .mission i, .vision i {
@@ -245,12 +249,14 @@ header .container {
 /* Values Section */
 #values {
     background-color: #f0f4f8;
+    padding: 3rem 0;
 }
 
 #values h3 {
     font-size: 2rem;
     color: #38bdf8;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .values-list {
@@ -267,6 +273,15 @@ header .container {
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.values-list li:hover {
+    transform: translateY(-10px);
 }
 
 .values-list li i {
@@ -281,28 +296,35 @@ header .container {
 /* Team Section */
 #team {
     background-color: #e2e8f0;
+    padding: 3rem 0;
 }
 
 #team h3 {
     font-size: 2rem;
     color: #38bdf8;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #team p {
     font-size: 1.125rem;
     color: #333;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Why Choose Us Section */
 #why-choose-us {
     background-color: #f0f4f8;
+    padding: 3rem 0;
 }
 
 #why-choose-us h3 {
     font-size: 2rem;
     color: #38bdf8;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .choose-us-list {
@@ -319,6 +341,15 @@ header .container {
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.choose-us-list li:hover {
+    transform: translateY(-10px);
 }
 
 .choose-us-list li i {
