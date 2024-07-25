@@ -513,3 +513,11 @@ footer p {
         bottom: 30px;
     }
 }
+
+@media (max-width: 480px) {
+    .wave {
+        height: 157px; /* Reduced height for mobile */
+        background-size: 150% auto; /* Adjust background size for mobile */
+        bottom: 13px;;
+    } 
+}
