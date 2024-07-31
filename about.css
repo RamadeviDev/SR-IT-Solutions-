@@ -138,6 +138,8 @@ header .container {
 
 .mobile-nav.active {
     display: flex;
+    position: relative;
+    top: -4px;
 }
 
 .mobile-nav ul {
