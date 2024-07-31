@@ -450,6 +450,12 @@ footer p {
         display: none;
     }
 
+     footer .footer-contact {
+        max-width: 300px;
+        position: relative;
+        left: 17px;
+    }
+
     .burger-menu {
         display: flex;
     }
@@ -510,6 +516,12 @@ footer p {
 @media (max-width: 480px) {
     .mission-vision-content {
         grid-template-columns: 1fr;
+    }
+
+     footer .footer-contact {
+        max-width: 300px;
+        position: relative;
+        left: 17px;
     }
 
     .mission, .vision {
