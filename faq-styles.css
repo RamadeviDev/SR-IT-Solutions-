@@ -203,6 +203,8 @@ header .container {
 .faq-section .btn-contact .material-icons {
     margin-left: 10px;
     transition: transform 0.3s ease;
+    position: relative;
+    bottom: -6px;
 }
 
 .faq-section .btn-contact:hover .material-icons {
