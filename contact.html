@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SR IT Solutions</title>
+    <link rel="icon" href="Images/SR IT Support Services Logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="Images/SR IT Support Services Logo.png" alt="SR IT Solutions Logo" /></a>
+            </div>
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                    <a href="quote.html" class="btn-quote">Get a Quote<span class="arrow">→</span></a>
+            </nav>
+            <button class="burger-menu" id="burgerMenu" aria-label="Toggle Menu" aria-expanded="false">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us </a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="quote.html" class="mobile-quote-link">Get a Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-hero" tabindex="-1">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
+            </div>
+        </section>
+
+        <section id="contact-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Get In Touch</h2>
+                    <form id="contact-form" onsubmit="sendMail(event)">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="animated-button">Send</button>
+                    </form>
+                </div>
+                <div id="thank-you-message" class="thank-you-message">
+                    <h2>Thank You!</h2>
+                    <p>We will respond to you soon.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-details">
+            <div class="container">
+                <div class="contact-card">
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:info@sritsolutions.uk">info@sritsolutions.uk</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+447784380421">+44 7784380421</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p class="Email">Email: <a href="mailto:info@sritsolutions.uk" class="mailto">info@sritsolutions.uk</a></p>
+                    <p>Phone: <a href="tel:+1234567890" class="phonenum">+44 7784380421</a></p>
+                </div>
+            </div>
+            <p>&copy; 2024 SR IT Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("QAGEdJTR87CZEB_ph");
+        })();
+
+        function sendMail(event) {
+            event.preventDefault();
+            const form = document.getElementById('contact-form');
+            emailjs.sendForm('service_k5x9hdf', 'template_ctyp7jl', form)
+                .then(() => {
+                    form.style.display = 'none';
+                    document.getElementById('thank-you-message').style.display = 'block';
+                }, (error) => {
+                    console.error('Failed to send email:', error);
+                });
+        }
+    </script>
+</body>
+</html>
