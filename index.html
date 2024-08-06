@@ -233,6 +233,42 @@
     </footer>
 
     <script src="scripts.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function() {
+        emailjs.init("QAGEdJTR87CZEB_ph"); // Replace with your EmailJS public key
+    })();
+    
+    function sendMail(event) {
+        event.preventDefault();
+        const form = document.getElementById('contact-form');
+        const formData = new FormData(form);
+        const data = {
+            service_id: 'service_k5x9hdf', // Replace with your EmailJS service ID
+            template_id: 'template_ctyp7jl', // Replace with your EmailJS template ID
+            user_id: 'QAGEdJTR87CZEB_ph', // Replace with your EmailJS public key
+            template_params: {
+                'name': formData.get('name'),
+                'email': formData.get('email'),
+                'subject': formData.get('subject'),
+                'message': formData.get('message')
+            }
+        };
+
+        emailjs.send(data.service_id, data.template_id, data.template_params)
+            .then(function(response) {
+                document.getElementById('contact-form').style.display = 'none';
+                document.getElementById('thank-you').style.display = 'block';
+            }, function(error) {
+                alert('Failed to send email. Please try again later.');
+            });
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', sendMail);
+</script>
+
+    
+    
         <script>
   document.addEventListener('DOMContentLoaded', function () {
       const validPaths = ['/', '/about', '/contact', '/quote', "/faq", "/Service", "/terms", "/#testimonials"]; // Add all valid paths here
