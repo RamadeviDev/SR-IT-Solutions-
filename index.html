@@ -280,5 +280,14 @@
                 });
         }
     </script>
+   <script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const validPaths = ['/', '/about', '/contact', '/quote', "/faq", "/Service", "/terms", "/#testimonials"]; // Add all valid paths here
+
+      if (!validPaths.includes(window.location.pathname)) {
+          window.location.href = '/error-404.html'; // Adjust the path to your 404 page
+      }
+  });
+</script>
 </body>
 </html>
